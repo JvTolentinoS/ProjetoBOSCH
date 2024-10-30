@@ -1,5 +1,6 @@
 package entidade;
 
+import java.util.AbstractList;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -44,9 +45,10 @@ public class Agendamento {
     private ArrayList<String> horariosDisponiveis;
     private String horarioEscolhido;
 
-    public Agendamento() {
+    public AbstractList<String> criarAgendamento() {
         horariosDisponiveis = new ArrayList<>();
         inicializarHorarios();
+        return horariosDisponiveis;
     }
 
     private void inicializarHorarios() {
