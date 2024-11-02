@@ -1,33 +1,24 @@
-import entidade.Agendamento;
-import java.util.Scanner;
-import dao.AgendamentoDAO;
-import dao.CarroDAO;
-import dao.ClienteDAO;
-import entidade.Carro;
-import entidade.Cliente;
+import interfaceGeral.*;
+import jnr.ffi.annotations.In;
 
 public class Main {
-
+    static ClienteService clienteService = new ClienteService();
+    static InterfaceService instancia = new InterfaceService();
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int escolha;
-
-        do {
-            System.out.println("Bem-Vindo(a) ao Bosch Car Service!");
-            System.out.println("Esse é um canal oficial da Bosch Car Service. Para mais informações, siga nossas redes sociais!");
-            System.out.println("Selecione entre as opções da lista, qual serviço deseja receber: \n\n\n");
-        } while (false);
-
-        System.out.println("1. Agendar um atendimento\n2. Alterar um agendamento\n3. Cancelar um agendamento\n");
-        escolha = scanner.nextInt();
-        if (escolha == 1) {
-            Agendamento agendamento = new Agendamento();
-            agendamento.criarAgendamento();
-            agendamento.exibirHorariosDisponiveis();
-        }
+        InterfaceService service = new InterfaceService();
+        service.initialInterface(clienteService);
     }
+
+
 }
 
+//        System.out.println("1. Agendar um atendimento\n2. Alterar um agendamento\n3. Cancelar um agendamento\n");
+//        escolha = scanner.nextInt();
+//        if (escolha == 1) {
+//            Agendamento agendamento = new Agendamento();
+//            agendamento.criarAgendamento();
+//            agendamento.exibirHorariosDisponiveis();
+//        }
 
 //  for (Carro c : carroDAO.getCarros()) {
 //            System.out.println("Carro: " +c.getPlaca());

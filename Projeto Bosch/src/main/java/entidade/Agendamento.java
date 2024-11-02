@@ -33,13 +33,21 @@ public class Agendamento {
         this.cpf = cpf;
     }
 
+    public String getPlaca() {
+        return placa;
+    }
+
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
+
     // CHAVES ESTRANGEIRAS
     private String cpf;
+    private String placa;
     //
 
     private Date dataCriacao;
     private Date dataAgendada;
-
 
     //
     private ArrayList<String> horariosDisponiveis;
