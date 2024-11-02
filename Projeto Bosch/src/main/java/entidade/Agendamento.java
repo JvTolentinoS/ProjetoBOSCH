@@ -41,6 +41,14 @@ public class Agendamento {
         this.placa = placa;
     }
 
+    public String getCarroDescricao() {
+        return carroDescricao;
+    }
+
+    public void setCarroDescricao(String carroDescricao) {
+        this.carroDescricao = carroDescricao;
+    }
+
     // CHAVES ESTRANGEIRAS
     private String cpf;
     private String placa;
@@ -52,6 +60,9 @@ public class Agendamento {
     //
     private ArrayList<String> horariosDisponiveis;
     private String horarioEscolhido;
+
+
+    private String carroDescricao;
 
     public AbstractList<String> criarAgendamento() {
         horariosDisponiveis = new ArrayList<>();

@@ -2,16 +2,12 @@ package entidade;
 
 public class Carro {
 
-    private String carroDefeito;
     private String cpf;
     private String placa;
     private String modelo;
     private String marca;
     private String ano;
 
-    public String getCarroDefeito() { return carroDefeito; }
-
-    public void setCarroDefeito(String carroDefeito) { this.carroDefeito = carroDefeito; }
 
     public String getCpf() {
         return cpf;

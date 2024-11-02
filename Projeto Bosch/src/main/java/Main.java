@@ -1,5 +1,4 @@
-import interfaceGeral.*;
-import jnr.ffi.annotations.In;
+import interfaceCliente.*;
 
 public class Main {
     static ClienteService clienteService = new ClienteService();
