@@ -362,24 +362,27 @@ public class ClienteServico {
                 }
 
                 // COLETA DE PLACA
-                while (true) {
+                boolean coletaDePlaca = true;
+                while (coletaDePlaca) {
                     System.out.print("Digite a placa do veículo: ");
                     placa = scanner.nextLine();
 
                     if (ValidadorCollection.verificarPlaca(placa)) {
                         String placaCarro = placa.toUpperCase();
                         for (Carro c : carroDAO.getCarros()) {
-                            if (c.getPlaca().equals(placaCarro)) {
+                            if (Objects.equals(c.getPlaca(), placaCarro)) {
                                 carro.setPlaca(placaCarro);
                                 System.out.println("Placa registrada: " + placaCarro);
+                                coletaDePlaca = false;
                             }
                         }
-                        break;
+                        if (coletaDePlaca) {
+                            System.out.println("A Placa mencionada não existe!");
+                        }
                     } else {
                         System.out.println("Placa inválida!");
                     }
                 }
-
                 // SOLICITAR A DESCRIÇÃO DO DEFEITO
                 System.out.print("Nos explique brevemente o tipo de serviço que você precisa ou defeito encontrado: ");
                 String defeito = scanner.nextLine();

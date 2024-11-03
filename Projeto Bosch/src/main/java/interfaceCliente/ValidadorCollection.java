@@ -89,6 +89,15 @@ public class ValidadorCollection {
         return false;
     }
 
+    public static boolean verificarCarroExiste(Carro carro, CarroDAO carroDAO, Cliente cliente, String placa) {
+        for (Carro carroLista : carroDAO.getCarrosCliente(cliente.getCpf_cliente())){
+            if ((Objects.equals(carroLista.getPlaca(), placa))){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static boolean verificarCarroExiste(Carro carro, CarroDAO carroDAO) { // SE BASEIA NA PLACA
         for (Carro carroLista : carroDAO.getCarros()) {
             if (Objects.equals(carroLista.getPlaca(), carro.getPlaca())) {
@@ -112,6 +121,8 @@ public class ValidadorCollection {
             return false;
         }
     }
+
+
 
     // METODO VERIFICADOR - MODELO
     public static boolean verificarModelo(String modelo) {
