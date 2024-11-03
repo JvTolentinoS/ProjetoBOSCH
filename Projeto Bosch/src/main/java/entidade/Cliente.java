@@ -1,8 +1,5 @@
 package entidade;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
-
 public class Cliente {
 
     private String nome_cliente;

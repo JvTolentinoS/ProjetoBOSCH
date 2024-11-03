@@ -37,9 +37,9 @@ public class AdminService {
             try {
                 listagemDeAgendas(cliente, agendamento);
 
-                System.out.println("\nEscolha um agendamento para consultar os detalhes");
-                System.out.println("\nDigite 0 para Voltar");
+                System.out.println("\nEscolha um \"ID\" para consultar os detalhes ");
                 System.out.println("\nDigite D para Deletar um agendamento");
+                System.out.println("\nDigite 0 para Voltar");
                 System.out.print("\nResposta: ");
                 String resposta = scanner.next().trim().toUpperCase();
 

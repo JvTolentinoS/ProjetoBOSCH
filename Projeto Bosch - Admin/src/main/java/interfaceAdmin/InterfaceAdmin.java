@@ -1,7 +1,5 @@
 package interfaceAdmin;
 
-import javax.swing.*;
-import java.sql.SQLOutput;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,7 +10,7 @@ public class InterfaceAdmin {
         initialInterface(adminService);
     }
 
-    public static InterfaceAdmin initialInterface(AdminService adminService) {
+    public static void initialInterface(AdminService adminService) {
         int i;
         Scanner scanner = new Scanner(System.in);
         logo();

@@ -5,13 +5,13 @@ import java.util.Scanner;
 
 public class InterfaceService {
 
-    static ClienteService clienteService = new ClienteService();
+    static ClienteServico clienteServico = new ClienteServico();
     public static void main(String[] args) {
         InterfaceService logo = new InterfaceService();
-        logo.initialInterface(clienteService);
+        logo.initialInterface(clienteServico);
     }
 
-    public InterfaceService initialInterface(ClienteService clienteService) {
+    public InterfaceService initialInterface(ClienteServico clienteServico) {
         logoText();
         introMessage();
         int i = -1;
@@ -23,7 +23,7 @@ public class InterfaceService {
                 switch (i) {
                     case 1: // Iniciar um Agendamento
                         System.out.println("Iniciando processo de criar agendamento...");
-                        clienteService.clientInitializer();
+                        clienteServico.clientInitializer();
                         break;
                         case 2: // Ver Agendamentos
                             System.out.println("Iniciando processo de ver agendamentos...");
@@ -45,15 +45,14 @@ public class InterfaceService {
     }
 
     private static void initialMenu() {
-        System.out.println("\n_____________________________________");
-        System.out.println("0 - Sair");
+        System.out.println("\n========================== MENU INICIAL ===========================");
         System.out.println("1 - Iniciar um Agendamento");
-        System.out.println("_____________________________________");
+        System.out.println("0 - Sair");
         System.out.print("Resposta: ");
     }
 
     private static void introMessage() {
-            System.out.println("\n_____________________________________\n");
+            System.out.println("\n========================== FAZEMOS TUDO POR SEU CARRO  ===========================");
             System.out.println("Bem-Vindo(a) ao Bosch Car Service!");
             System.out.println("Este é o canal oficial da Bosch Car Service. Para mais informações, siga nossas redes sociais!");
             System.out.println("Selecione entre as opções abaixo:");

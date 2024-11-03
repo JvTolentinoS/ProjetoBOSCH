@@ -20,10 +20,7 @@ public class Conexao {
 
             Connection connection = DriverManager.getConnection(URL, USERNAME, SENHA);
 
-            System.out.println("Conectando");
-
             return connection;
-
 
         } catch (SQLException | ClassNotFoundException e) {
             e.printStackTrace();
